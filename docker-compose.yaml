@@ -1,0 +1,10 @@
+version: '2'
+services:
+  website1:
+    image: richarvey/nginx-php-fpm
+    restart: always
+    volumes:
+      - /mnt/hgfs/vmwareshare/website1/tp5:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/sites-available/default.conf
+    ports:
+      - 80:80
